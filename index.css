@@ -1,0 +1,187 @@
+/* Background gradient for entire page */
+body {
+  background: linear-gradient(to right top, #9bc3ff, #79a0e0, #577fc1, #345ea3, #004085);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #f0f0f0;
+  min-height: 100vh;
+  padding-top: 70px; /* To offset fixed navbar height */
+}
+
+/* Glass-like navbar */
+.glass-navbar {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+  color: #f0f0f0 !important;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+  color: #cce4ff !important;
+}
+
+/* Hero Section */
+.banner-section {
+  position: relative;
+  background: url('https://media.istockphoto.com/id/880720550/photo/coffee-cup-coffee-beans.jpg?s=612x612&w=0&k=20&c=Hys1kwquSclobkzG_vUpPg2k9p2xzAsVY8-YaxzstBo=') center center/cover no-repeat;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 1rem;
+  color: #fff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+  overflow: hidden;
+}
+
+/* Gradient fade overlay from left to right */
+.banner-section .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* Fade from opaque black on left to transparent on right */
+  background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0));
+  pointer-events: none;
+  z-index: 1;
+}
+
+.banner-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+}
+
+.banner-title {
+  font-size: 3.8rem;
+  font-weight: 900;
+  margin-bottom: 0.5rem;
+}
+
+.banner-tagline {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+/* CTA Button */
+.cta-btn {
+  background-color: #004085;
+  border: none;
+  padding: 0.75rem 2.5rem;
+  font-size: 1.25rem;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(0, 64, 133, 0.6);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-btn:hover,
+.cta-btn:focus {
+  background-color: #002752;
+  box-shadow: 0 6px 20px rgba(0, 39, 82, 0.8);
+}
+
+/* Carousel images */
+.carousel-item img {
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+/* Heading */
+h2 {
+  color: #e0e7ff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+}
+
+/* Cards */
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
+
+.card-title {
+  font-weight: 700;
+  color: #004085;
+}
+
+.card-text {
+  font-weight: 600;
+  color: #003366;
+}
+
+.btn-primary {
+  background-color: #345ea3;
+  border: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #002752;
+}
+
+/* About and Contact Sections */
+#about-section, #contact-section {
+  color: #e0e7ff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  padding: 2rem 1rem;
+  background: rgba(255 255 255 / 0.1);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+}
+
+#about-section h2,
+#contact-section h2 {
+  margin-bottom: 1rem;
+}
+
+#contact-section a {
+  color: #a8c0ff;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+#contact-section a:hover,
+#contact-section a:focus {
+  color: #d0e0ff;
+}
+
+/* Footer */
+footer {
+  background-color: rgba(0, 40, 85, 0.9);
+  color: #cce4ff;
+  padding: 1rem 0;
+  box-shadow: inset 0 1px 10px rgba(255,255,255,0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .banner-title {
+    font-size: 2.5rem;
+  }
+  .banner-tagline {
+    font-size: 1.1rem;
+  }
+  .carousel-item img {
+    height: 250px;
+  }
+}
